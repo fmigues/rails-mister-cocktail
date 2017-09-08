@@ -12,6 +12,6 @@ user.each do |key, index|
 end
 
 
-cocktails = [{name: "Gin Tonic"}, {name: "Whiskey Sour"}]
+# cocktails = [{name: "Gin Tonic"}, {name: "Whiskey Sour"}]
 
-cocktails.each { |cocktail| Cocktail.create(cocktail) }
+# cocktails.each { |cocktail| Cocktail.create(cocktail) }

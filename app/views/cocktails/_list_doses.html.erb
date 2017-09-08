@@ -1,3 +1,3 @@
 <ul>
- <%= dose.description %> - <%= dose.ingredient.name %> ---- <%= link_to 'destroy', cocktail_dose_path(@cocktail, dose), method: :delete  %>
+ <%= dose.description %> - <%= dose.ingredient.name %> ---- <%= link_to 'Remove', cocktail_dose_path(@cocktail, dose), method: :delete  %>
 </ul>
