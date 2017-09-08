@@ -12,20 +12,6 @@ user.each do |key, index|
 end
 
 
-cocktails = [
-  {
-    name: "Molotov",
-    picture: "https://static.pexels.com/photos/162915/drink-fruit-water-detox-detox-water-162915.jpeg"
-    },
-  {
-    name: "Avalanche",
-    picture: "https://static.pexels.com/photos/161456/smoothie-fruit-vegetables-salad-beetroot-carrots-161456.jpeg"
-    },
-  {
-    name: "Terremoto",
-    picture: "https://static.pexels.com/photos/338713/pexels-photo-338713.jpeg"
-    },
-]
-
+cocktails = [{name: "Gin Tonic"}, {name: "Whiskey Sour"}]
 
 cocktails.each { |cocktail| Cocktail.create(cocktail) }

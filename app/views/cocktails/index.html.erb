@@ -1,10 +1,24 @@
-<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('https://static.pexels.com/photos/110472/pexels-photo-110472.jpeg');">
+
+<div class="text-center banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('https://static.pexels.com/photos/109275/pexels-photo-109275.jpeg');">
   <div class="banner-content">
     <h1>The Best Cocktails</h1>
     <p>Your perfect drink</p>
     <div class="text-center padded">
-      <%= link_to "Create a cocktail", new_cocktail_path, class: "btn btn-primary" %>
+      <%= link_to "Create a cocktail", new_cocktail_path, class: "btn btn-default" %>
     </div>
   </div>
 </div>
-
+<div class="container text-center">
+  <h4 class="text-center">Check all our cocktails</h4>
+  <div class="row">
+    <% @cocktails.each do |cocktail| %>
+    <div class="col-xs-12 col-sm-4">
+    <div class="card text-center" style="background-image: url('<%= cl_image_path cocktail.photo, height: 300, width: 400, crop: :fill %>')">
+      </div>
+      <div class="text-center">
+        <h6> <%= link_to cocktail.name, cocktail_path(cocktail) %></h6>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>
