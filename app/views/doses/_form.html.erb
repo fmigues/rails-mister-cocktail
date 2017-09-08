@@ -1,0 +1,13 @@
+<%= simple_form_for([@cocktail,@dose]) do |f| %>
+
+  <% if @dose.errors %>
+    <% @dose.errors.messages.each do |error|  %>
+      Error: <%= error  %>
+    <% end %>
+  <% end %>
+
+  <%= f.input :description, placeholder: '20 cl of...' %>
+  <%= f.input :ingredient_id, collection: Ingredient.all %>
+
+  <%= f.submit 'Create!', class: 'btn btn-primary' %>
+<% end %>

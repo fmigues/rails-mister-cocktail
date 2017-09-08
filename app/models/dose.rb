@@ -1,7 +1,8 @@
 class Dose < ApplicationRecord
   belongs_to :cocktail
   belongs_to :ingredient
-  validates :description, presence: true, uniqueness: true
+  validates :description, :cocktail, :ingredient, presence: true
+  validates :cocktail, uniqueness: { scope: :ingredient }
 end
 
 # dose = dose.find(params[:id])
