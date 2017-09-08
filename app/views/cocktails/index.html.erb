@@ -13,7 +13,7 @@
   <div class="row">
     <% @cocktails.each do |cocktail| %>
     <div class="col-xs-12 col-sm-4">
-    <div class="card text-center" style="background-image: url('<%= cl_image_path cocktail.photo, height: 300, width: 400, crop: :fill %>')">
+    <div class="card text-center" style="background-image: url('<%= cl_image_path cocktail.photo, height: 300, width: 400, crop: :fill if cocktail.photo? %>')">
       </div>
       <div class="text-center">
         <h6> <%= link_to cocktail.name, cocktail_path(cocktail) %></h6>
